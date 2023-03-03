@@ -1,19 +1,8 @@
-import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
 import {
   CloudArrowUpIcon,
-  CogIcon,
-  HeartIcon,
-  InboxIcon,
   LockClosedIcon,
-  MenuIcon,
-  QuestionMarkCircleIcon,
   ServerIcon,
-  SparklesIcon,
-  TrashIcon,
-  UsersIcon,
 } from "@heroicons/react/24/outline";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import Team from "../team";
 import Hero from "../hero";
 import MainNav from "../MainNav";
