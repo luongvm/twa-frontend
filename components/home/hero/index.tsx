@@ -1,15 +1,5 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from "react";
-import { Popover, Transition } from "@headlessui/react";
-import { CogIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-
-const navigation = [
-  { name: "Product", href: "#" },
-  { name: "Features", href: "#" },
-  { name: "Marketplace", href: "#" },
-  { name: "Company", href: "#" },
-];
 
 export default function Hero() {
   return (
@@ -42,12 +32,12 @@ export default function Hero() {
             >
               Contact us
             </Link>
-            <a
+            <Link
               href="/projects"
               className="text-sm font-semibold leading-6 text-gray-900"
             >
               Learn more <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

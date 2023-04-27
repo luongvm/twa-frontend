@@ -103,6 +103,7 @@ export default function Home() {
               >
                 <div className="w-full overflow-hidden bg-gray-200 rounded-md min-h-80 aspect-h-1 aspect-w-1 lg:aspect-none group-hover:opacity-75 lg:h-80">
                   <Image
+                    alt="Product image"
                     src={product.image}
                     className="object-cover object-center w-full h-full lg:h-full lg:w-full"
                   />
