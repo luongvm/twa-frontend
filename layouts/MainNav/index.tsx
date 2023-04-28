@@ -40,7 +40,7 @@ const solutions = [
 ];
 export default function MainNav() {
   return (
-    <header>
+    <header className="sticky top-0 z-50">
       <Popover className="relative bg-white">
         <div className="flex items-center justify-between px-4 py-6 mx-auto max-w-7xl sm:px-6 md:justify-start md:space-x-10 lg:px-8">
           <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -59,7 +59,7 @@ export default function MainNav() {
               <CogIcon className="w-6 h-6" aria-hidden="true" />
             </Popover.Button>
           </div>
-          <Popover.Group as="nav" className="hidden space-x-10 md:flex">
+          <Popover.Group as="nav" className="hidden ml-0 space-x-10 md:flex">
             {/* <Popover className="relative">
               {({ open }) => (
                 <>
@@ -123,7 +123,7 @@ export default function MainNav() {
 
             <Link
               href={"/projects"}
-              className="text-base font-medium text-gray-500 hover:text-gray-900"
+              className="text-base font-medium text-gray-500 hover:text-gray-900 "
             >
               Projects
             </Link>

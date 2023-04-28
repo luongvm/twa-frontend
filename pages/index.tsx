@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Home from "../components/home/index.v1";
+import MainLayout from "../layouts/MainLayout";
 
 export default function Main() {
   return (
@@ -12,9 +13,9 @@ export default function Main() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
+      <MainLayout>
         <Home />
-      </div>
+      </MainLayout>
     </>
   );
 }

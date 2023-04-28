@@ -3,11 +3,10 @@ import {
   LockClosedIcon,
   ServerIcon,
 } from "@heroicons/react/24/outline";
-import Team from "./team";
-import Hero from "./hero";
-import MainNav from "./MainNav";
-import LogoCloud from "./logoCloud";
-import Product from "./product";
+import Team from "./Team";
+import Hero from "./Hero";
+import LogoCloud from "./LogoCloud";
+import Product from "./Product";
 
 const features = [
   {
@@ -147,8 +146,6 @@ export default function Home() {
           </defs>
         </svg>
       </div>
-
-      <MainNav />
 
       <main>
         {/* Hero section */}
