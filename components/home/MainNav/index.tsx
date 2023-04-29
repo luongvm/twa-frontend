@@ -34,6 +34,7 @@ const solutions = [
     icon: QuestionMarkCircleIcon,
   },
 ];
+
 export default function MainNav() {
   return (
     <header>

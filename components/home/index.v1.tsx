@@ -254,7 +254,7 @@ export default function Home() {
         {/* What we do */}
         <Product />
         {/* Gradient Feature Section */}
-        <Team />
+        {/* <Team /> */}
       </main>
 
       <footer className="bg-gray-50" aria-labelledby="footer-heading">

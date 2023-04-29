@@ -19,18 +19,18 @@ const AboutUs = () => {
         />
       </div>
 
-      <div className="flex flex-col px-6 mx-auto mt-8 max-w-7xl lg:px-8">
+      <div className="flex flex-col mx-auto max-w-7xl ">
         {/* Meet the Team */}
 
         {/* Section Header */}
         <div className="flex flex-wrap justify-center mb-24 text-center">
           <div className="w-full px-4 lg:w-6/12">
             {/* Header */}
-            <h1 className="mb-8 text-4xl font-bold text-gray-900">
+            <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
               Meet the Team
             </h1>
             {/* Description */}
-            <p className="text-lg text-gray-700">
+            <p className="mt-2 text-lg leading-8 text-gray-600">
               With over 100 years of combined experience, we've got a
               well-seasoned team at the helm.
             </p>
