@@ -3,10 +3,10 @@ import {
   LockClosedIcon,
   ServerIcon,
 } from "@heroicons/react/24/outline";
-import Team from "./Team";
 import Hero from "./Hero";
 import LogoCloud from "./LogoCloud";
 import Product from "./Product";
+import Team from "./Team";
 
 const features = [
   {
