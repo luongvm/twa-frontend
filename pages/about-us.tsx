@@ -1,8 +1,9 @@
+import React from "react";
 import Head from "next/head";
-import ProjectPage from "../components/projects";
+import AboutUsPage from "../components/about-us";
 import MainLayout from "../layouts/MainLayout";
 
-export default function Projects() {
+const AboutUs = () => {
   return (
     <>
       <Head>
@@ -14,8 +15,10 @@ export default function Projects() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainLayout>
-        <ProjectPage />
+        <AboutUsPage />
       </MainLayout>
     </>
   );
-}
+};
+
+export default AboutUs;
