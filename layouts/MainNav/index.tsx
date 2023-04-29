@@ -1,39 +1,41 @@
 import { Popover, Transition } from "@headlessui/react";
 import {
   InboxIcon,
-  QuestionMarkCircleIcon,
-  CogIcon,
+  BuildingOfficeIcon,
+  BoltIcon,
+  Bars3Icon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { Fragment } from "react";
 
 const solutions = [
   {
-    name: "Inbox",
+    name: "Projects",
     description:
       "Get a better understanding of where your traffic is coming from.",
-    href: "#",
-    icon: InboxIcon,
+    href: "/projects",
+    icon: BoltIcon,
   },
   {
-    name: "Messaging",
+    name: "About Us",
     description: "Speak directly to your customers in a more meaningful way.",
-    href: "#",
-    icon: InboxIcon,
+    href: "/about-us",
+    icon: BuildingOfficeIcon,
   },
   {
-    name: "Live Chat",
+    name: "Contact Us",
     description: "Your customers' data will be safe and secure.",
-    href: "#",
+    href: "/contact",
     icon: InboxIcon,
   },
-  {
-    name: "Knowledge Base",
-    description: "Connect with third-party tools that you're already using.",
-    href: "#",
-    icon: QuestionMarkCircleIcon,
-  },
+  // {
+  //   name: "Knowledge Base",
+  //   description: "Connect with third-party tools that you're already using.",
+  //   href: "#",
+  //   icon: QuestionMarkCircleIcon,
+  // },
 ];
+
 export default function MainNav() {
   return (
     <header className="sticky top-0 z-50">
@@ -52,7 +54,7 @@ export default function MainNav() {
           <div className="-my-2 -mr-2 md:hidden">
             <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
               <span className="sr-only">Open menu</span>
-              <CogIcon className="w-6 h-6" aria-hidden="true" />
+              <Bars3Icon className="w-6 h-6" aria-hidden="true" />
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden ml-0 space-x-10 md:flex">
@@ -172,14 +174,14 @@ export default function MainNav() {
                   <div className="-mr-2">
                     <Popover.Button className="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                       <span className="sr-only">Close menu</span>
-                      <CogIcon className="w-6 h-6" aria-hidden="true" />
+                      <Bars3Icon className="w-6 h-6" aria-hidden="true" />
                     </Popover.Button>
                   </div>
                 </div>
                 <div className="mt-6">
                   <nav className="grid grid-cols-1 gap-7">
                     {solutions.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
                         className="flex items-center p-3 -m-3 rounded-lg hover:bg-gray-50"
@@ -190,12 +192,12 @@ export default function MainNav() {
                         <div className="ml-4 text-base font-medium text-gray-900">
                           {item.name}
                         </div>
-                      </a>
+                      </Link>
                     ))}
                   </nav>
                 </div>
               </div>
-              <div className="px-5 py-6">
+              {/* <div className="px-5 py-6">
                 <div className="grid grid-cols-2 gap-4">
                   <a
                     href="#"
@@ -230,7 +232,7 @@ export default function MainNav() {
                     </a>
                   </p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </Popover.Panel>
         </Transition>
