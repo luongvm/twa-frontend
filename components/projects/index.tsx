@@ -2,9 +2,9 @@ import Image from "next/image";
 import Hero from "./Hero";
 import { projects } from "../../contants/project";
 
-export default function Home() {
+export default function ProjectsPage() {
   return (
-    <div className="bg-white isolate">
+    <div className="bg-white isolate pt-20 pb-10">
       <main>
         {/* Hero section */}
         <Hero />
@@ -22,13 +22,16 @@ export default function Home() {
                 className="relative group"
                 href={product.href}
               >
-                <div className="w-full overflow-hidden bg-gray-200 rounded-md min-h-80 aspect-h-1 aspect-w-1 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <div className="w-full overflow-hidden bg-gray-200 rounded-md min-h-80 aspect-h-1 aspect-w-1 lg:aspect-none group-hover:opacity-75 lg:h-80 border shadow">
                   <Image
                     alt="Product image"
                     src={product.image}
                     className="object-cover object-center w-full h-full lg:h-full lg:w-full"
                   />
                 </div>
+                <p className="text-gray-600 pt-2 text-center">
+                  {product.title}
+                </p>
               </a>
             ))}
           </div>

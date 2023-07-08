@@ -10,59 +10,7 @@ import "swiper/css/scrollbar";
 
 // Import Swiper styles
 import "swiper/css";
-
-const posts = [
-  {
-    title: "Leazo",
-    href: "http://leazo.vn/",
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-    date: "Mar 16, 2020",
-    datetime: "2020-03-16",
-    category: { title: "E-Commerce", href: "#" },
-    image: require("../../../assets/projects/leazo.png"),
-  },
-  {
-    title: "VicPartners",
-    href: "https://vic.partners/",
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-    date: "Mar 16, 2020",
-    datetime: "2020-03-16",
-    category: { title: "Marketing", href: "#" },
-    image: require("../../../assets/projects/vic-partners.png"),
-  },
-  {
-    title: "CruiseBook",
-    href: "https://www.cruise-book.com/",
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-    date: "Mar 16, 2020",
-    datetime: "2020-03-16",
-    category: { title: "Marketing", href: "#" },
-    image: require("../../../assets/projects/cruise-book.png"),
-  },
-  {
-    title: "WEEHOURS",
-    href: "https://weehours.vn/",
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-    date: "Mar 16, 2020",
-    datetime: "2020-03-16",
-    category: { title: "E-Commerce", href: "#" },
-    image: require("../../../assets/projects/weehours.png"),
-  },
-  {
-    title: "Curnon Watch",
-    href: "https://curnonwatch.com/",
-    description:
-      "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta.",
-    date: "Mar 16, 2020",
-    datetime: "2020-03-16",
-    category: { title: "E-Commerce", href: "#" },
-    image: require("../../../assets/projects/curnon-watch.png"),
-  },
-];
+import { projects } from "../../../contants/project";
 
 export default function Product() {
   return (
@@ -70,10 +18,10 @@ export default function Product() {
       <div className="px-6 mx-auto max-w-7xl lg:px-8">
         <div className="max-w-2xl mx-auto lg:mx-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            What we do
+            What we've done?
           </h2>
           <p className="mt-2 text-lg leading-8 text-gray-600">
-            Learn how to grow your business with our expert advice.
+            These are our past projects. Some of them are now de-func.
           </p>
         </div>
         <div className="max-w-2xl pt-10 mx-auto mt-10 border-t border-gray-200 gap-y-16 gap-x-8 sm:mt-16 sm:pt-16 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -96,12 +44,12 @@ export default function Product() {
             }}
             autoplay={{
               delay: 2500,
-              disableOnInteraction: false,
+              disableOnInteraction: true,
             }}
             modules={[Scrollbar, A11y, Autoplay]}
             loop={true}
           >
-            {posts.map((post, index) => (
+            {projects.map((post, index) => (
               <SwiperSlide
                 key={String(index)}
                 className="flex flex-col items-start justify-between max-w-xl"

@@ -16,14 +16,17 @@ export default function Hero() {
         </div>
         <div className="text-center">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-            Thewebmasters.agency
+            Semi-Professional Teams That Delivers
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Welcome to our team! We are experienced designers and developers
-            with passionate for creating exceptional digital products that help
-            your business grow and succeed online. We work collaboratively with
-            you to understand your business needs and deliver customized
-            solutions that meet your goals and exceed your expectations.
+            We are <em className="text-gray-500">(somewhat)</em> experienced
+            designers and developers who are passionate about getting your ideas
+            off the ground. We work <u>collaboratively</u> with you to
+            understand your business needs and give you a realistic goal that
+            we'll achieve together.{" "}
+            <a href="mailto:me@luongvu.com" className="font-bold">
+              Let's talk!
+            </a>
           </p>
           <div className="flex items-center justify-center mt-10 gap-x-6">
             <Link
