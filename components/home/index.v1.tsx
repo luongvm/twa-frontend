@@ -10,21 +10,21 @@ import Team from "./Team";
 
 const features = [
   {
-    name: "Push to deploy.",
+    name: "Focused Approach",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
+      "Working with a dedicated team means that there are little to no distractions. You won’t find a dedicated team losing its way midway in the project.",
     icon: CloudArrowUpIcon,
   },
   {
-    name: "SSL certificates.",
+    name: "Competent Team",
     description:
-      "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo.",
+      "A dedicated web development team structure is very important as it gives a significant advantage in implementing all the necessary features needed for the project, including bug fixing and maintenance, which can significantly impact multiple components of the web development project.",
     icon: LockClosedIcon,
   },
   {
-    name: "Database backups.",
+    name: "Cost-Effective",
     description:
-      "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+      "When you go with an agency to design your site, you’ll have the advantage of working with a team that understands strategy, messaging, and UX. Specialists can walk you through the process of planning, designing, and building a website that is customer-centric and focuses on benefits.",
     icon: ServerIcon,
   },
 ];
@@ -67,21 +67,20 @@ export default function Home() {
 
         {/* Alternating Feature Sections */}
         <div className="relative overflow-hidden">
-          <div className="py-24 overflow-hidden bg-white sm:py-32">
+          <div className="overflow-hidden bg-white">
             <div className="px-6 mx-auto max-w-7xl lg:px-8">
               <div className="grid max-w-2xl grid-cols-1 mx-auto gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
                 <div className="lg:pr-8 lg:pt-4">
                   <div className="lg:max-w-lg">
                     <h2 className="text-base font-semibold leading-7 text-indigo-600">
-                      Deploy faster
+                      0-To-Hero Made Easier
                     </h2>
                     <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                      A better workflow
+                      A better experience
                     </p>
                     <p className="mt-6 text-lg leading-8 text-gray-600">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Maiores impedit perferendis suscipit eaque, iste dolor
-                      cupiditate blanditiis ratione.
+                      Three things you can expect when go with a dedicated
+                      development team
                     </p>
                     <dl className="max-w-xl mt-10 space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                       {features.map((feature) => (
@@ -93,6 +92,7 @@ export default function Home() {
                             />
                             {feature.name}
                           </dt>
+                          <br />
                           <dd className="inline">{feature.description}</dd>
                         </div>
                       ))}
@@ -109,7 +109,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="mt-0">
+          <div className="hidden mt-0">
             <div className="px-6 mx-auto max-w-7xl lg:px-8">
               <div className="grid max-w-2xl grid-cols-1 mx-auto gap-y-16 gap-x-8 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:grid-flow-col-dense">
                 <div className="max-w-xl px-4 mx-auto lg:pl-8 lg:pt-4 sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">
