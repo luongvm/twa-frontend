@@ -3,6 +3,61 @@ import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { Switch } from "@headlessui/react";
 import { Icon } from "@iconify/react";
+import Avatar from "./assets/images/avatar/avatar.png";
+//Avatar gen by https://www.avatartion.com/
+import Avatar_1 from "./assets/images/avatar/avatar_(1).png";
+import Avatar_2 from "./assets/images/avatar/avatar_(2).png";
+import Avatar_3 from "./assets/images/avatar/avatar_(3).png";
+import Avatar_4 from "./assets/images/avatar/avatar_(4).png";
+import Avatar_5 from "./assets/images/avatar/avatar_(5).png";
+import Image from "next/image";
+
+const teams = [
+  {
+    name: "Luong Vu",
+    role: "CTO",
+    linkedin: "https://www.linkedin.com/in/luongvm183/",
+    github: "https://github.com/luongvm",
+    image: Avatar,
+  },
+  {
+    name: "Nghia Than",
+    role: "Software Engineer",
+    linkedin: "https://www.linkedin.com/in/nghiatv/",
+    github: "http://github.com/nghiatv",
+    image: Avatar_1,
+  },
+  {
+    name: "Quan Khong",
+    role: "Software Engineer",
+    linkedin: "https://www.linkedin.com/in/quankm/",
+    github: "https://github.com/quanKM",
+    image: Avatar_3,
+  },
+  {
+    name: "Tung Do",
+    role: "Software Engineer",
+    linkedin: "https://www.linkedin.com/in/tungdotien/",
+    github: "https://github.com/dotungvp1994",
+    image: Avatar_4,
+  },
+  {
+    name: "Dai Pham",
+    role: "Software Engineer",
+    linkedin: "https://www.linkedin.com/in/daipm/",
+    github: "https://github.com/Friend13th",
+    image: Avatar_2,
+  },
+  {
+    name: "Nghia Nguyen",
+    role: "Designer",
+    linkedin: "https://www.linkedin.com/in/nghia-nguyen-19b3a4183/",
+    behance: "https://www.behance.net/hipwon",
+    github: "",
+    image: Avatar_5,
+  },
+];
+
 const AboutUs = () => {
   return (
     <div className="px-6 py-24 bg-white isolate sm:py-32 lg:px-8">
@@ -36,152 +91,76 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
+
         {/* Team Members */}
         <div className="flex flex-wrap">
-          {/* Member #1 */}
-          <div className="w-full px-6 mb-6 md:w-6/12 lg:w-3/12 sm:px-6 lg:px-4">
-            <div className="flex flex-col">
-              {/* Avatar */}
-              <a href="#" className="mx-auto">
-                <img
-                  alt="Avatar"
-                  className="transition-all duration-200 delay-100 rounded-2xl drop-shadow-md hover:drop-shadow-xl"
-                  src="https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?fit=clamp&w=400&h=400&q=80"
-                />
-              </a>
-              {/* Details */}
-              <div className="mt-6 text-center">
-                {/* Name */}
-                <h1 className="mb-1 text-xl font-bold text-gray-900">
-                  Luong Vu
-                </h1>
-                {/* Title */}
-                <div className="mb-2 text-base text-gray-700">CTO</div>
-                {/* Social Icons */}
-                <div className="flex items-center justify-center transition-opacity duration-300 opacity-50 hover:opacity-100">
-                  {/* Linkedin */}
-                  <a
-                    href="#"
-                    className="flex w-10 h-10 rounded-full hover:bg-indigo-50"
-                  >
-                    <Icon
-                      className="mx-auto mt-2 text-indigo-500"
-                      icon={"mdi-linkedin"}
-                    />
-                  </a>
+          {teams.map((member) => (
+            <div
+              className="w-full px-6 mb-6 md:w-6/12 lg:w-3/12 sm:px-6 lg:px-4"
+              key={member.name}
+            >
+              <div className="flex flex-col">
+                {/* Avatar */}
+                <a href="#" className="mx-auto">
+                  <Image
+                    alt="Avatar"
+                    className="transition-all duration-200 delay-100 rounded-2xl drop-shadow-md hover:drop-shadow-xl"
+                    src={member.image}
+                    height={294}
+                    width={320}
+                  />
+                </a>
+                {/* Details */}
+                <div className="mt-6 text-center">
+                  {/* Name */}
+                  <h1 className="mb-1 text-xl font-bold text-gray-900">
+                    {member.name}
+                  </h1>
+                  {/* Title */}
+                  <div className="mb-2 text-base text-gray-700">
+                    {member.role}
+                  </div>
+                  {/* Social Icons */}
+                  <div className="flex items-center justify-center transition-opacity duration-300 opacity-50 hover:opacity-100">
+                    {/* Linkedin */}
+                    {member.linkedin && (
+                      <a
+                        href={member.linkedin}
+                        className="flex w-10 h-10 rounded-full hover:bg-indigo-50"
+                      >
+                        <Icon
+                          className="mx-auto mt-2 text-indigo-500"
+                          icon={"mdi-linkedin"}
+                        />
+                      </a>
+                    )}
+                    {member?.github && (
+                      <a
+                        href={member.github}
+                        className="flex w-10 h-10 rounded-full hover:bg-indigo-50"
+                      >
+                        <Icon
+                          className="mx-auto mt-2 text-indigo-500"
+                          icon={"mdi-github"}
+                        />
+                      </a>
+                    )}
+                    {member?.behance && (
+                      <a
+                        href={member.behance}
+                        className="flex w-10 h-10 rounded-full hover:bg-indigo-50"
+                      >
+                        <Icon
+                          className="mx-auto mt-2 text-indigo-500"
+                          icon={"mdi-dribbble"}
+                        />
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          {/* Member #2 */}
-          <div className="w-full px-6 mb-6 md:w-6/12 lg:w-3/12 sm:px-6 lg:px-4">
-            <div className="flex flex-col">
-              {/* Avatar */}
-              <a href="#" className="mx-auto">
-                <img
-                  alt="Avatar"
-                  className="transition-all duration-200 delay-100 rounded-2xl drop-shadow-md hover:drop-shadow-xl"
-                  src="https://images.unsplash.com/photo-1634896941598-b6b500a502a7?fit=clamp&w=400&h=400&q=80"
-                />
-              </a>
-              {/* Details */}
-              <div className="mt-6 text-center">
-                {/* Name */}
-                <h1 className="mb-1 text-xl font-bold text-gray-900">
-                  Nghia Than
-                </h1>
-                {/* Title */}
-                <div className="mb-2 text-base text-gray-700">
-                  Front-end Leader
-                </div>
-                {/* Social Icons */}
-                <div className="flex items-center justify-center transition-opacity duration-300 opacity-50 hover:opacity-100">
-                  {/* Linkedin */}
-                  <a
-                    href="#"
-                    className="flex w-10 h-10 rounded-full hover:bg-indigo-50"
-                  >
-                    <Icon
-                      className="mx-auto mt-2 text-indigo-500"
-                      icon={"mdi-linkedin"}
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Member #3 */}
-          <div className="w-full px-6 mb-6 md:w-6/12 lg:w-3/12 sm:px-6 lg:px-4">
-            <div className="flex flex-col">
-              {/* Avatar */}
-              <a href="#" className="mx-auto">
-                <img
-                  alt="Avatar"
-                  className="transition-all duration-200 delay-100 rounded-2xl drop-shadow-md hover:drop-shadow-xl"
-                  src="https://images.unsplash.com/photo-1634193295627-1cdddf751ebf?fit=clamp&w=400&h=400&q=80"
-                />
-              </a>
-              {/* Details */}
-              <div className="mt-6 text-center">
-                {/* Name */}
-                <h1 className="mb-1 text-xl font-bold text-gray-900">
-                  Quan Khong
-                </h1>
-                {/* Title */}
-                <div className="mb-2 text-base text-gray-700">Team Memeber</div>
-                {/* Social Icons */}
-                <div className="flex items-center justify-center transition-opacity duration-300 opacity-50 hover:opacity-100">
-                  {/* Linkedin */}
-                  <a
-                    href="#"
-                    className="flex w-10 h-10 rounded-full hover:bg-indigo-50"
-                  >
-                    <Icon
-                      className="mx-auto mt-2 text-indigo-500"
-                      icon={"mdi-linkedin"}
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* Member #4 */}
-          <div className="w-full px-6 mb-6 md:w-6/12 lg:w-3/12 sm:px-6 lg:px-4">
-            <div className="flex flex-col">
-              {/* Avatar */}
-              <a href="#" className="mx-auto">
-                <img
-                  alt="Avatar"
-                  className="transition-all duration-200 delay-100 rounded-2xl drop-shadow-md hover:drop-shadow-xl"
-                  src="https://images.unsplash.com/photo-1635003913011-95971abba560?fit=clamp&w=400&h=400&q=80"
-                ></img>
-              </a>
-              {/* Details */}
-              <div className="mt-6 text-center">
-                {/* Name */}
-                <h1 className="mb-1 text-xl font-bold text-gray-900">
-                  Doesn't matter
-                </h1>
-                {/* Title */}
-                <div className="mb-2 text-base text-gray-700">
-                  Will be fired
-                </div>
-                {/* Social Icons */}
-                <div className="flex items-center justify-center transition-opacity duration-300 opacity-50 hover:opacity-100">
-                  {/* Linkedin */}
-                  <a
-                    href="#"
-                    className="flex w-10 h-10 rounded-full hover:bg-indigo-50"
-                  >
-                    <Icon
-                      className="mx-auto mt-2 text-indigo-500"
-                      icon={"mdi-linkedin"}
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
