@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import AboutUsPage from "../components/contact";
+import ContactUsPage from "../components/contact";
 import MainLayout from "../layouts/MainLayout";
 
 const ContactUs = () => {
@@ -15,7 +15,7 @@ const ContactUs = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainLayout>
-        <AboutUsPage />
+        <ContactUsPage />
       </MainLayout>
     </>
   );
