@@ -1,11 +1,12 @@
 import { useForm } from "@formspree/react";
-import Link from "next/link";
 import { useRouter } from "next/router";
-import { useCallback, useEffect } from "react";
+import { useCallback } from "react";
 
 const ContactUs = () => {
   const router = useRouter();
-  const [formState, submit] = useForm(process.env.NEXT_PUBLIC_FORM || "");
+  const [formState, submit] = useForm(
+    process.env.NEXT_PUBLIC_FORM || "my-form",
+  );
   const goHome = useCallback(() => {
     router.push("/");
   }, [router]);

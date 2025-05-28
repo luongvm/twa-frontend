@@ -100,11 +100,9 @@ export default function Home() {
                   </div>
                 </div>
                 <img
-                  src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+                  src="https://picsum.photos/600/800"
                   alt="Product screenshot"
-                  className="w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-                  width={2432}
-                  height={1442}
+                  className="max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10  md:-ml-4 lg:-ml-0 w-full"
                 />
               </div>
             </div>
@@ -152,7 +150,7 @@ export default function Home() {
                   <div className="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
                     <img
                       className="ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none w-[48rem] max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] md:-ml-4 lg:-ml-0"
-                      src="https://tailwindui.com/img/component-images/inbox-app-screenshot-2.jpg"
+                      src="https://picsum.photos/400/300"
                       alt="Customer profile user interface"
                     />
                   </div>

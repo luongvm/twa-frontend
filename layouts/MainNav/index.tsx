@@ -46,7 +46,7 @@ export default function MainNav() {
               <span className="sr-only">The Webmasters Agency</span>
               <img
                 className="w-auto h-8 sm:h-10"
-                src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
+                src="https://placehold.co/150x50/transparent/F00?text=TWA"
                 alt=""
               />
             </Link>
@@ -167,7 +167,7 @@ export default function MainNav() {
                   <div>
                     <img
                       className="w-auto h-8"
-                      src="https://tailwindui.com/img/logos/workflow-mark-purple-600-to-indigo-600.svg"
+                      src="https://placehold.co/150x50/transparent/F00?text=TWA"
                       alt="Workflow"
                     />
                   </div>
